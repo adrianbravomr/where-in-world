@@ -1,38 +1,101 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-content{
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fs-small{
+  font-size: 70% !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loading-container{
+  width: 100vw;
+  height: 90vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.puzzle-image {
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fade-in {
+	-webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
   }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.context-menu{
+  position: fixed;
+  width: 300px;
+  z-index: 20;
+  padding: 50px;
+}
+
+.toast-message{
+  padding-top: 80px;
+  opacity: 90%;
+}
+
+.nav-places-count{
+  width: 65px;
+}
+
+.discovered-tack{
+  position: absolute;
+  z-index: 10;
+  font-size: 300%;
+	-webkit-animation: slide-in-top 0.5s ease-in-out both;
+	        animation: slide-in-top 0.5s ease-in-out both;
+}
+
+ @-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.place-thumbnail{
+  width: 50px;
+  height: 40px;
+  object-fit:fill;
 }
