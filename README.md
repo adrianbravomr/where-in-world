@@ -9,3 +9,5 @@ A photo tagging web app based on where's waldo game.
 - React hooks
 - Higher order components
 - React-bootstrap
+- React Context hook
+- Async Code (Fetch Firebase data)
